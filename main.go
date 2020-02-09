@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/qita/cmd"
 	"github.com/urfave/cli"
 )
 
@@ -24,12 +25,12 @@ func main() {
 					fmt.Println("Please set $QIITA_ACCESS_TOKEN")
 				}
 
-				user := os.Getenv("QIITA_USER")
-				if user == "" {
-					fmt.Println("Please set $QIITA_USER")
+				userId := os.Getenv("QIITA_USER_ID")
+				if userId == "" {
+					fmt.Println("Please set $QIITA_USER_ID. \n USER_ID is like @****")
 				}
 
-				info, err := cmd.FetchQiitaData(accessToken, user)
+				info, err := cmd.FetchQiitaData(accessToken, userId)
 				if err != nil {
 					log.Fatal(err)
 				}
