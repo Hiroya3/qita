@@ -58,10 +58,11 @@ func FetchQiitaData(token string, userId string) (MyInfo, error) {
 //コンソール出力
 func OutputQiitaInfo(info MyInfo) {
 	fmt.Println("==============自分のQiita情報==============")
-	fmt.Printf("%-10v%v%v", "ID", ": ", info.ID)
-	fmt.Printf("%-10v%v%v", "Name", ": ", info.Name)
-	fmt.Printf("%-10v%v%v", "ItemsCount", ": ", info.ItemsCount)
-	fmt.Printf("%-10v%v%v", "Location", ": ", info.Location)
-	fmt.Printf("%-10v%v%v", "FollowersCount", ": ", info.FollowersCount)
-	fmt.Printf("%-10v%v%v", "FolloweesCount", ": ", info.FolloweesCount)
+	fmt.Printf("%-15v%v%v\n", "ID", ": ", info.ID)
+	fmt.Printf("%-15v%v%v\n", "Name", ": ", info.Name)
+	fmt.Printf("%-15v%v%v\n", "ItemsCount", ": ", info.ItemsCount)
+	fmt.Printf("%-15v%v%v\n", "Location", ": ", info.Location)
+	fmt.Printf("%-15v%v%v\n", "FollowersCount", ": ", info.FollowersCount)
+	fmt.Printf("%-15v%v%v\n", "FolloweesCount", ": ", info.FolloweesCount)
+	fmt.Println("=========================================")
 }
